@@ -1,0 +1,14 @@
+
+h1 {
+    color: red;
+}
+
+li input {
+    margin-bottom: 10px;
+    /* justify-content: space-between; */
+}
+
+main {
+    text-align: center;
+    padding-top: 100px;
+}

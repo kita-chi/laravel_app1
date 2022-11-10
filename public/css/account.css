@@ -1,0 +1,49 @@
+
+/* body {
+    text-align: center;
+} */
+
+header {
+    /* display: inline-block; */
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    top: 0%;
+    height: 100px;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+
+.title h1 {
+    float: left;
+    margin: 20px 10px;
+    
+}
+
+.title a {
+    color: black;
+
+}
+
+a {
+    text-decoration: none;
+    z-index: 100;
+}
+
+.title2 h1 {
+    /* position: absolute; */
+    
+    padding-left: 455px;
+}
+
+main {
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.btn {
+    margin-top: 10px;
+}

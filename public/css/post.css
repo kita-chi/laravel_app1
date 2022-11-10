@@ -1,0 +1,61 @@
+body {
+    top: 0%;
+
+}
+
+header {
+    /* display: inline-block; */
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    top: 0%;
+    height: 100px;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+
+.title h1 {
+    float: left;
+    margin: 20px 10px;
+    
+}
+
+.title a {
+    color: black;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.title2 h1 {
+    padding-left: 485px;
+}
+
+
+main {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+    background-color: aqua;
+}
+
+.input {
+    margin: 20px auto;
+    width: 20%;
+    height: 50px;
+}
+
+textarea {
+    width: 60%;
+    height: 240px;
+    font-size: 30px;
+}
+
+.submit {
+    margin-bottom: 10px;
+}

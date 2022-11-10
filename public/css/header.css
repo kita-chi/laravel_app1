@@ -1,0 +1,60 @@
+body {
+    height: 2000px;
+}
+header {
+    /* display: inline-block; */
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    top: 0%;
+    height: 100px;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    float: left;
+    margin: 20px 10px;
+    
+}
+
+.title a {
+    color: black;
+    margin-right: 270px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.right {
+    float: right;
+}
+
+.right input {
+    float: right;
+    margin-top: 18px;
+    margin-right: 10px;
+    width: 120px;
+}
+
+.right ul {
+    display: inline-block;
+}
+
+li {
+    list-style-type: none;
+}
+
+.right li {
+    list-style: none;
+    size: 100px;
+    float: right;
+    padding-right: 10px;
+}
+
+.right a {
+    color: black;
+    
+}
