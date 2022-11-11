@@ -32,12 +32,39 @@ a {
     float: right;
 }
 
-.right input {
-    float: right;
+.search {
+    border: 1px solid #999;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    width: 170px;
+    height: 20px;
     margin-top: 18px;
-    margin-right: 10px;
-    width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 170px;
 }
+
+.right input {
+    font-family: FontAwesome;
+    border: none;
+}
+
+.right input[type="text"]{
+    width: 120px;
+    margin-left: 8px;
+}
+
+.right input[type="text"]:focus{
+    outline: none;
+}
+
+.right input[type="submit"]{
+    width: 2em;
+    background: none;
+    padding-right: 0;
+    padding-left: 0;
+}
+
 
 .right ul {
     display: inline-block;

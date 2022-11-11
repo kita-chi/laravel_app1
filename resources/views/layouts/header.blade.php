@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -20,9 +20,11 @@
         </div>
         
         <div class="right">
-            <form action="search" method="post">
+            <form action="search" method="post" class="search">
                 @csrf
-                <input type=text name="search" placeholder="内容を検索">
+
+                <input type=text name="search"  placeholder="内容を検索">
+                <input type="submit" value="&#xf002">
             </form>
             <ul>
                 @if(session('id'))

@@ -1,5 +1,7 @@
 
 <link rel="stylesheet" href="/css/home.css">
+<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 @include('layouts.header')
 
 <body>
@@ -15,7 +17,9 @@
                         
                         <p><?php echo $datas[$i]->updated_at.'<br>' ?></p>
 
+
                         @if ( Session('id')==$datas[$i]->userid)
+
                             <ul>
                             <div class="edit">
                                 <form action="edit" method="post">
@@ -32,6 +36,8 @@
                                 </form>
                             </div>
                             </ul>
+                        @else
+                        <i class="fa-regular fa-heart"></i>
                         @endif
 
                     </a>
