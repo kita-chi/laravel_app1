@@ -67,7 +67,7 @@ a {
 
 
 .right ul {
-    display: inline-block;
+    float: right;
 }
 
 li {
