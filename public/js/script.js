@@ -83,3 +83,43 @@ function delete3() {
     }
 }
 
+
+// $('.like1').click(function(){
+//     if ($(this).hasClass('fa-regular')) {
+//         $(this).removeClass('fa-regular');
+//         $(this).addClass('fa-solid');
+        
+//     } else {
+//         $(this).removeClass('fa-solid');
+//         $(this).addClass('fa-regular');
+//     }
+// });
+
+
+    $('.like1').on('click',function(){
+        let id = $(this).data('id1');
+        // if ($(this).hasClass('fa-regular')) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
+                },
+                url: "/like1",
+                async: true,
+                type: 'POST',
+                dataType: "text",
+                data: {'id':id}
+                
+            })
+            .done(function(){
+                alert('you liked it');
+            })
+            .fail(function(){
+                alert('miss')
+            })
+        // } else {
+
+        // }
+        
+    });
+    
+

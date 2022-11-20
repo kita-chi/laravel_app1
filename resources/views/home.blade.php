@@ -1,6 +1,5 @@
 
 <link rel="stylesheet" href="/css/home.css">
-<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 @include('layouts.header')
 
@@ -10,7 +9,7 @@
         <div class="details">
             @for ($i=0; $i<count($datas); $i++)
                 <div class="detail">
-                    <a class="detail1" href="/" >
+                    <div class="detail1" href="/" >
                         <h2><?php echo $datas[$i]->name ?></h2>
                         <h2>「<?php echo $datas[$i]->title ?>」</h2>
                         <h2><?php echo $datas[$i]->content ?></h2>
@@ -36,16 +35,20 @@
                                 </form>
                             </div>
                             </ul>
-                        @else
-                        <i class="fa-regular fa-heart"></i>
+                            
                         @endif
-
-                    </a>
+                        <div class="like-show">
+                                <i class="fa-regular fa-heart like1" data-id1="<?php echo $datas[$i]->blogid ?>"></i>
+                        
+                                <!-- <i class="fa-solid fa-heart like2 none"></i> -->
+                        </div>
+                    </div>
                 </div>
             @endfor
         </div>
     </main>
-
+    
 <script src="{{ asset('/js/script.js') }}"></script>
+
 </body>
 </html>

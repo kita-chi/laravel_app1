@@ -4,14 +4,14 @@
 }
 main {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .detail {
     padding: 50px 0px;
     margin-left: 15%;
     margin-bottom: 10px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 70%;
 }
 
@@ -23,4 +23,13 @@ main {
 .detail li {
     margin-right: 50px;
 }
+
+.fa-solid {
+    color: red;
+}
+
+.none {
+    display: none !important;
+}
+
 

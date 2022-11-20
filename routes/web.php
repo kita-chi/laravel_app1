@@ -14,6 +14,7 @@ use App\Http\Controllers\Profile;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\DeleteUser;
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\Liked;
 
 /*
 |--------------------------------------------------------------------------
@@ -111,5 +112,5 @@ Route::post('admin2/{id}',[Admin::class,'admin2']);
 
 Route::post('delete_user2',[DeleteUser::class,'delete_user2']);
 
-
+Route::post('/like1',[Liked::class,'like1']);
 
