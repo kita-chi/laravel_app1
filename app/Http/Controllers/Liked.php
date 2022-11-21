@@ -21,9 +21,16 @@ class Liked extends Controller
             $like->created_at = date('Y-m-d H:i:s');
             $like->updated_at = date('Y-m-d H:i:s');
             $like->save();
-            // $likeCheck = true;
+            $a='a';
+            // $a = ".addClass('none')";
+            // $a = '<i class="fa-solid fa-heart like2 "></i>';
+            return response()->json($a);
+
         } else {
             $data->delete();
+            $b='b';
+            return response()->json($b);
+
             // $likeCheck = false;
         }
     }

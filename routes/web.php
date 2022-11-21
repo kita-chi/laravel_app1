@@ -34,9 +34,9 @@ Route::get('/',[Home::class,'home']);
 
 Route::post('/',[Home::class,'home']);
 
-Route::post('/', function() {
-    return view('home');
-});
+// Route::post('/', function() {
+//     return view('home');
+// });
 
 Route::get('show', function() {
     return view('show');

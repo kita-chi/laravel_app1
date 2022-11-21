@@ -95,9 +95,9 @@ function delete3() {
 //     }
 // });
 
-
-    $('.like1').on('click',function(){
-        let id = $(this).data('id1');
+    $('.fa-heart').on('click',function(){
+        let $this = $(this);
+        let id = $this.data('id1');
         // if ($(this).hasClass('fa-regular')) {
             $.ajax({
                 headers: {
@@ -106,12 +106,21 @@ function delete3() {
                 url: "/like1",
                 async: true,
                 type: 'POST',
-                dataType: "text",
+                dataType: "json",
                 data: {'id':id}
                 
             })
-            .done(function(){
-                alert('you liked it');
+            .done(function(data){
+                alert(data);
+                if (data == "a"){
+                    $this.removeClass('fa-regular');
+                    $this.addClass('fa-solid');
+                } else if (data == "b") {
+                    $this.removeClass('fa-solid');
+                    $this.addClass('fa-regular');
+                }
+                // $('.fa-heart')+data;
+                // $('.fa-heart').innerHTML(data);
             })
             .fail(function(){
                 alert('miss')
@@ -121,5 +130,6 @@ function delete3() {
         // }
         
     });
+    
     
 

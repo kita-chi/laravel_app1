@@ -35,13 +35,13 @@
                                 </form>
                             </div>
                             </ul>
-                            
-                        @endif
-                        <div class="like-show">
+                            <div class="like-show">
                                 <i class="fa-regular fa-heart like1" data-id1="<?php echo $datas[$i]->blogid ?>"></i>
                         
-                                <!-- <i class="fa-solid fa-heart like2 none"></i> -->
-                        </div>
+                                <!-- <i class="fa-solid fa-heart like2 "></i> -->
+                            </div>
+                        @endif
+                        
                     </div>
                 </div>
             @endfor

@@ -13,6 +13,14 @@ use App\Models\Like;
 class Home extends Controller
 {
     //
+   //  public function likedCheck($num) {
+
+   //    $blogid = $req -> id;
+
+   //    return Like::where('user_id','=',session('id'))
+   //    ->where('blog_id','=',$num)->first() != null;
+      
+   //  }
 
     public function home() {
        
@@ -22,7 +30,22 @@ class Home extends Controller
        ->orderBy('blogs.updated_at','desc')
        ->get();
 
-       
+      //  $liked=$this->likedCheck();
+
+      //   if ($data == null) {
+      //       $like = new Like();
+      //       $like->user_id = session('id');
+      //       $like->blog_id = $blogid;
+      //       $like->created_at = date('Y-m-d H:i:s');
+      //       $like->updated_at = date('Y-m-d H:i:s');
+      //       $liked = $like->likedCheck($blogid);
+
+      //       $like->save();
+      //       // $likeCheck = true;
+      //   } else {
+      //       $data->delete();
+      //       // $likeCheck = false;
+      //   }
     
        return view('home',compact('datas'));
         
