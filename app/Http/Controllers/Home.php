@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Like;
+use Illuminate\Database\Eloquent\Model;
+
 
 
 // use Illuminate\Support\Facades\Gate;
@@ -13,14 +15,6 @@ use App\Models\Like;
 class Home extends Controller
 {
     //
-   //  public function likedCheck($num) {
-
-   //    $blogid = $req -> id;
-
-   //    return Like::where('user_id','=',session('id'))
-   //    ->where('blog_id','=',$num)->first() != null;
-      
-   //  }
 
     public function home() {
        
@@ -30,7 +24,14 @@ class Home extends Controller
        ->orderBy('blogs.updated_at','desc')
        ->get();
 
-      //  $liked=$this->likedCheck();
+       $likes=Like::where('user_id',session('id'))
+       ->get();
+
+       $liked=array();
+       for ($i=0; $i<count($likes); $i++) {
+         array_push($liked,$likes[$i]["blog_id"]);
+       }
+      //  $liked=$this->likedCheck($datas);
 
       //   if ($data == null) {
       //       $like = new Like();
@@ -47,7 +48,7 @@ class Home extends Controller
       //       // $likeCheck = false;
       //   }
     
-       return view('home',compact('datas'));
+       return view('home',compact('datas','liked'));
         
     }
 }

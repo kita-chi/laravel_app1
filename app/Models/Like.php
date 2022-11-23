@@ -12,8 +12,9 @@ class Like extends Model
 
 
     public function likedCheck($num) {
-        return $data = Like::where('user_id','=',session('id'))
+        $data = Like::where('user_id','=',session('id'))
             ->where('blog_id','=',$num)
-            ->first() != null;
-    }
+            ->first();
+            return $data;
+        }
 }

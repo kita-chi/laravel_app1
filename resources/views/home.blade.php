@@ -16,7 +16,6 @@
                         
                         <p><?php echo $datas[$i]->updated_at.'<br>' ?></p>
 
-
                         @if ( Session('id')==$datas[$i]->userid)
 
                             <ul>
@@ -35,11 +34,15 @@
                                 </form>
                             </div>
                             </ul>
-                            <div class="like-show">
-                                <i class="fa-regular fa-heart like1" data-id1="<?php echo $datas[$i]->blogid ?>"></i>
-                        
-                                <!-- <i class="fa-solid fa-heart like2 "></i> -->
-                            </div>
+                            
+                        @endif
+
+                        @if (session('id'))
+                            @if ( !in_array($datas[$i]->blogid, $liked) )
+                                        <i class="fa-regular fa-heart like1" data-id1="<?php echo $datas[$i]->blogid ?>"></i>
+                            @else
+                                        <i class="fa-solid fa-heart like2 " data-id1="<?php echo $datas[$i]->blogid ?>"></i>
+                            @endif
                         @endif
                         
                     </div>

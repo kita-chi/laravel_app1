@@ -1,0 +1,14 @@
+<?php 
+
+namespace App\Lib;
+use App\Models\Like;
+
+class My_func
+{
+    public static function likedCheck($num) {
+        return Like::where('user_id','=',session('id'))
+        ->where('blog_id','=',$num)
+        ->first() != null;
+        
+    }
+}
