@@ -37,14 +37,15 @@
                             
                         @endif
 
-                        @if (session('id'))
-                            @if ( !in_array($datas[$i]->blogid, $liked) )
-                                        <i class="fa-regular fa-heart like1" data-id1="<?php echo $datas[$i]->blogid ?>"></i>
-                            @else
-                                        <i class="fa-solid fa-heart like2 " data-id1="<?php echo $datas[$i]->blogid ?>"></i>
-                            @endif
+                        @if (session('id') && !in_array($datas[$i]->blogid, $liked))
+                                    <i class="fa-regular fa-heart like" data-id1="<?php echo $datas[$i]->blogid ?>"></i>
+                        @elseif (session('id') && in_array($datas[$i]->blogid, $liked))
+                            <i class="fa-solid fa-heart like " data-id1="<?php echo $datas[$i]->blogid ?>"></i>
                         @endif
-                        
+
+                        @if ($good = count(array_keys($likes2,$datas[$i]->blogid)))
+                                    いいね {{ $good }}
+                        @endif
                     </div>
                 </div>
             @endfor

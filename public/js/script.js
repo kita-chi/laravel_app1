@@ -95,7 +95,7 @@ function delete3() {
 //     }
 // });
 
-    $('.fa-heart').on('click',function(){
+    $('.like').on('click',function(){
         let $this = $(this);
         let id = $this.data('id1');
         // if ($(this).hasClass('fa-regular')) {
@@ -111,7 +111,6 @@ function delete3() {
                 
             })
             .done(function(data){
-                alert(data);
                 if (data == "a"){
                     $this.removeClass('fa-regular');
                     $this.addClass('fa-solid');
@@ -125,10 +124,6 @@ function delete3() {
             .fail(function(){
                 alert('miss')
             })
-        // } else {
-
-        // }
-        
     });
     
     

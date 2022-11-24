@@ -31,6 +31,14 @@ class Home extends Controller
        for ($i=0; $i<count($likes); $i++) {
          array_push($liked,$likes[$i]["blog_id"]);
        }
+
+       $like=Like::all();
+       $likes2=array();
+       for ($i=0; $i<count($like); $i++) {
+         array_push($likes2,$like[$i]["blog_id"]);
+       }
+
+       
       //  $liked=$this->likedCheck($datas);
 
       //   if ($data == null) {
@@ -48,7 +56,7 @@ class Home extends Controller
       //       // $likeCheck = false;
       //   }
     
-       return view('home',compact('datas','liked'));
+       return view('home',compact('datas','liked','likes2'));
         
     }
 }
