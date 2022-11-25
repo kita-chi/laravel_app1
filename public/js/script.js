@@ -114,9 +114,11 @@ function delete3() {
                 if (data == "a"){
                     $this.removeClass('fa-regular');
                     $this.addClass('fa-solid');
+                    location.reload();
                 } else if (data == "b") {
                     $this.removeClass('fa-solid');
                     $this.addClass('fa-regular');
+                    location.reload();
                 }
                 // $('.fa-heart')+data;
                 // $('.fa-heart').innerHTML(data);

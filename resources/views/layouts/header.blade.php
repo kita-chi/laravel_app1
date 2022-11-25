@@ -16,7 +16,7 @@
     @section('header')
     <header>
         <div class="title">
-            <h1><a href="/">Blog</a></h1>
+            <h1 onClick=location.reload();>Blog</h1>
             @if (session('name'))
                 <h1>Welcome!! "{{ session('name') }}"</h1>
             @endif
